@@ -1,0 +1,57 @@
+.btn:hover{
+    background-color: brown;
+}
+
+.janela-modal{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    top:0;
+    left:0;
+    background-color: rgba(0, 255, 255, 0.103);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index:999;
+}
+
+.modal{
+    width: 60%;
+    min-height: 450px;
+    min-height: 200px;
+    background-color: #ffffffa6;
+    backdrop-filter: blur(10px);
+    padding:50px;
+    border-radius: 20px;
+}
+.fechar{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: red;
+    color:#fff;
+    font-size: 20px;
+    cursor: po;
+}
+
+.janela-modal.abrir{
+    display:flex;
+}
+
+@keyframes abrirModal {
+    from{
+        opacity: 0;
+        transform: translate3d(-20px, 0, -5px);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+
+.abrir .modal{
+    animation: abrirModal 0.2s;
+}
